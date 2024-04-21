@@ -35,7 +35,7 @@ public class TextService {
         Usuario usuario = this.textRepository.findById(id).orElseThrow();
         String nombreUsuario = usuario.getNombre();
 
-        return saludo + ", " + nombreUsuario;
+        return String.format("%s, %s",  saludo, nombreUsuario);
     }
 
     public String getGoodbyeText() throws Exception {

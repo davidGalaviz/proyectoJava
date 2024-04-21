@@ -16,8 +16,10 @@ class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(TextRepository repository) {
         return args -> {
-            log.info("Precargando " + repository.save(new Usuario("David")));
-            log.info("Precargando " + repository.save(new Usuario("Ana")));
+            Usuario david = repository.save(new Usuario("David"));
+            log.info(String.format("Precargando %s", david));
+            Usuario ana = repository.save(new Usuario("Ana"));
+            log.info(String.format("Precargando %s", ana));
         };
     }
 }

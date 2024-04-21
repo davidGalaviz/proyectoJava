@@ -34,6 +34,6 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + this.id + ", nombre='" + this.nombre + '\'' + '}';
+        return String.format("Usuario {id=%s, nombre='%s'}", this.id, this.nombre);
     }
 }
