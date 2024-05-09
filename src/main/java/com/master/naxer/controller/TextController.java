@@ -23,17 +23,6 @@ public class TextController {
         }catch (Exception e) {
             System.out.println("No goodbye text available.");
         }
-
     }
 
-    @GetMapping("/printString")
-    String printString() {
-        return this.textService.getText();
-    }
-
-    // Microactividad 6
-    @GetMapping("/getString/{id}")
-    String getString(@PathVariable Long id){
-        return this.textService.getTextById(id);
-    }
 }
